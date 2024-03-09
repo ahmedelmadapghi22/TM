@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TM</string>
+    <string name="title_meters_from_kilo">Calculate the number of meters from kilograms</string>
+    <string name="weight_of_part">Weight of part</string>
+    <string name="length_of_part">Length of part</string>
+    <string name="weight">Weight</string>
+    <string name="length">Length</string>
+    <string name="total_weight">Total Weight</string>
+    <string name="calc">Calc</string>
+    <string name="price_one_kilo">Price kilo</string>
+    <string name="price">Price</string>
+    <string name="total_meters">Total Meters</string>
+    <string name="total_price">Total price in eg</string>
+    <string name="analysis_kilo">Analysis Kilograms</string>
+    <string name="weight_of_pipe">Weight of pipe</string>
+    <string name="number_of_pipe">Number of pipe</string>
+    <string name="number">number</string>
+    <string name="price_one_meter">Price meter</string>
+    <string name="analysis">Analysis</string>
+    <string name="net_weight">Net weight</string>
+    <string name="kg">Kilogram</string>
+    <string name="normal_weight">Normal weight</string>
+    <string name="weight_of_pipes">Weight of pipes</string>
+    <string name="m">Meter</string>
+    <string name="price_kilograms">Price kilograms</string>
+    <string name="eg">Egyptian Pound</string>
+    <string name="price_net_weight">Net weight price</string>
+    <string name="price_meters">Meters price</string>
+    <string name="difference_between_normal_weight_and_net_weight">Net Vs Normal</string>
+    <string name="difference_between_kilo_and_meter">Meter Vs Kilo</string>
+    <string name="default_value">0</string>
+</resources>

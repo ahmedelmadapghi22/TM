@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvGoodsName"
+        style="@style/MaterialTextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="name"
+        app:layout_constraintEnd_toStartOf="@+id/tvGoodsQuantity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGoodsQuantity"
+        style="@style/TextViewContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="500 kg"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/tvGoodsPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGoodsName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGoodsPrice"
+        style="@style/TextViewContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9000 eg"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/tvGoodsDate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGoodsQuantity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGoodsDate"
+        style="@style/TextViewContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="12-10-2024"
+        android:textColor="@color/gray"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGoodsPrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

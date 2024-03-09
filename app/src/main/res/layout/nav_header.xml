@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cerulean"
+    >
+
+    <TextView
+        android:id="@+id/tvGoodsName"
+        style="@style/MaterialTextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/material"
+        app:layout_constraintEnd_toStartOf="@+id/tvGoodsQuantity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tvGoodsQuantity"
+        style="@style/MaterialTextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/quantity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvGoodsPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGoodsName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/tvGoodsPrice"
+        style="@style/MaterialTextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvGoodsDate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGoodsQuantity"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tvGoodsDate"
+        style="@style/MaterialTextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/date"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGoodsName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGoodsPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

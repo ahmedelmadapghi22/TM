@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.kilograms.AnalysisKilogramsFragment">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardElevation="@dimen/_5sdp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp"
+            >
+            <TextView
+                android:id="@+id/tvTitleWeightOfPart"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_of_part"
+
+                app:layout_constraintEnd_toStartOf="@+id/tvTitleLengthOfPart"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitleLengthOfPart"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/length_of_part"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvTitleWeightOfPart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/weightOfPartLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toStartOf="@+id/lengthOfPartLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleWeightOfPart">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edWeightOfPart"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/weight_of_part"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lengthOfPartLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/weightOfPartLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleLengthOfPart">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edLengthOfPart"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/length_of_part" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvTitleTotalWeight"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/total_weight"
+
+                app:layout_constraintEnd_toStartOf="@+id/tvTitleWeightOfPipe"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weightOfPartLayout" />
+
+            <TextView
+                android:id="@+id/tvTitleWeightOfPipe"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_of_pipe"
+
+                app:layout_constraintEnd_toStartOf="@+id/tvTitleNumberOfPipe"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvTitleTotalWeight"
+                app:layout_constraintTop_toBottomOf="@+id/weightOfPartLayout" />
+
+            <TextView
+                android:id="@+id/tvTitleNumberOfPipe"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/number_of_pipe"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvTitleWeightOfPipe"
+                app:layout_constraintTop_toBottomOf="@+id/weightOfPartLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/totalWeightLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/weightOfPipeLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleTotalWeight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edTotalWeight"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/weight" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/weightOfPipeLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/NumberOfPipeLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/totalWeightLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleTotalWeight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edWeightOfPipe"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/weight" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NumberOfPipeLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/weightOfPipeLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleTotalWeight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edNumberOfPipe"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/number"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvTitlePriceOfKilo"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/price_one_kilo"
+
+                app:layout_constraintEnd_toStartOf="@+id/tvTitlePriceOfMeter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalWeightLayout" />
+
+            <TextView
+                android:id="@+id/tvTitlePriceOfMeter"
+                style="@style/TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/price_one_meter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvTitlePriceOfKilo"
+                app:layout_constraintTop_toBottomOf="@+id/totalWeightLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/priceOfKiloLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toStartOf="@+id/priceOfMeterLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitlePriceOfKilo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edPriceOfKilo"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/price" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/priceOfMeterLayout"
+                style="@style/InputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/priceOfKiloLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitlePriceOfMeter">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edPriceOfMeter"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/price"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tvAnalysis"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/analysis"
+        android:textSize="@dimen/_15ssp"
+/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvNormalWeightTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/normal_weight"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvNormalWeight"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvUnitWeight"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kg"
+                    android:layout_weight="1"
+
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvTotalWeightPipeTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight_of_pipes"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvWeightOfPipes"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvUnitWeightOfPipes"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kg"
+                    android:layout_weight="1"
+
+                    />
+            </TableRow>
+            <TableRow>
+            <TextView
+                android:id="@+id/tvNetWeightTitle"
+                style="@style/TextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/net_weight"
+                android:layout_weight="1"
+
+                />
+            <TextView
+                android:id="@+id/tvNetWeight"
+                style="@style/TextViewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:layout_weight="1"
+
+
+                />
+            <TextView
+                android:id="@+id/tvUnitNetWeight"
+                style="@style/TextViewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kg"
+                android:layout_weight="1"
+
+                />
+        </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvMeterTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/m"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvMeterInGrams"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvMeterInGramsUnit"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kg"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvTotalMetersTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_meters"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvTotalMeters"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvUnitMeter"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/m"
+                    android:layout_weight="1"
+
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvPriceOfKilogramsTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_kilograms"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvPriceOfKilograms"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvUnitNormalWeightPrice"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eg"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvPriceOFNetWeightTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_net_weight"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvPriceOFNetWeight"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvUnitNetWeightPrice"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eg"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvPriceOfMetersTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_meters"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvPriceOfMeters"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvUnitMetersPrice"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eg"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvDifferencePriceTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/difference_between_normal_weight_and_net_weight"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvDifferencePrice"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvPriceDifferenceUnit"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eg"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvMetersVsKiloTitle"
+                    style="@style/TextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/difference_between_kilo_and_meter"
+                    android:layout_weight="1"
+
+                    />
+                <TextView
+                    android:id="@+id/tvMetersVsKilo"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/tvMetersVsKiloUnit"
+                    style="@style/TextViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eg"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/tvBestSale"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/analysis"
+        android:textSize="@dimen/_15ssp"
+
+        />
+</LinearLayout>
